@@ -1,0 +1,10 @@
+MPLAYER -loop 0 tractor.yuv -demuxer rawvideo -rawvideo w=1920:h=1080 -fps 25
+
+
+ffmpeg -i jayach.avi -vcodec rawvideo  -ss 00:00:00 -t 00:00:12 trimmed_video.avi
+
+ffmpeg -s 1920x1080 -i tractor.yuv -vcodec rawvideo jay.avi
+
+ffmpeg -i selectivelyblurredvideo.avi -s 1920x1080 -pix_fmt yuv420p selectivelyblurredvideo.yuv
+
+ 
